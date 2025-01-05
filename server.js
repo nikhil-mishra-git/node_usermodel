@@ -20,6 +20,9 @@ app.get('/',(req,res)=>{
 // Import Routes
 
 const UserRoute = require('./routes/userRoute');
+
+// Use Routes
+
 app.use('/User',UserRoute);
 
 
