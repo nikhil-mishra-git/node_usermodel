@@ -4,6 +4,10 @@
 const express = require('express')
 const app  = express();
 
+// Env file Import
+
+require('dotenv').config();
+
 //Body-Parser
 
 const bodyParser = require('body-parser');
@@ -25,5 +29,6 @@ const UserRoute = require('./routes/userRoute');
 
 app.use('/User',UserRoute);
 
+const PORT = process.env.PORT || 7000;
 
-app.listen(7000,()=>{console.log('Port Runnig On 7000');})
+app.listen(PORT,()=>{console.log('Port Runnig On 7000');})

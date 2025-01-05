@@ -3,8 +3,12 @@
 // =================  Datbase Setup  ======================
 
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const mongooseURL = 'mongodb://127.0.0.1:27017/UserAuth';
+const DB_URL = process.env.DB_URL;
+
+// const mongooseURL = DB_URL_LOCAL;
+const mongooseURL = DB_URL;
 
 mongoose.connect(mongooseURL);
 
